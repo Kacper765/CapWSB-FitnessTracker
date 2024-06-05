@@ -3,8 +3,6 @@ package com.capgemini.wsb.fitnesstracker;
 import com.capgemini.wsb.fitnesstracker.training.internal.TrainingRepository;
 import com.capgemini.wsb.fitnesstracker.user.api.User;
 import com.capgemini.wsb.fitnesstracker.user.api.UserNotFoundException;
-import com.capgemini.wsb.fitnesstracker.user.api.UserEmailDto;
-import com.capgemini.wsb.fitnesstracker.user.internal.UserEmailProjection;
 import com.capgemini.wsb.fitnesstracker.user.internal.UserRepository;
 import com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
@@ -40,8 +38,8 @@ class UserServiceImplTest {
 
     @Test
     void createUser_shouldCreateUser() {
-        User user = new User("Dean", "Winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
-        User savedUser = new User("Dean", "Winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
+        User user = new User("John", "Doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
+        User savedUser = new User("John", "Doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
         savedUser.setId(1L);
 
         when(userRepository.save(any(User.class))).thenReturn(savedUser);
@@ -49,20 +47,20 @@ class UserServiceImplTest {
         User createdUser = userService.createUser(user);
 
         assertNotNull(createdUser);
-        assertEquals("dean.winchester@example.com", createdUser.getEmail());
+        assertEquals("john.doe@example.com", createdUser.getEmail());
         verify(userRepository, times(1)).save(user);
     }
 
     @Test
     void getUser_shouldReturnUserWhenExists() {
-        User user = new User("Dean", "Winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
+        User user = new User("John", "Doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
         user.setId(1L);
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
 
         Optional<User> foundUser = userService.getUser(1L);
 
         assertTrue(foundUser.isPresent());
-        assertEquals("dean.winchester@example.com", foundUser.get().getEmail());
+        assertEquals("john.doe@example.com", foundUser.get().getEmail());
     }
 
     @Test
@@ -76,30 +74,30 @@ class UserServiceImplTest {
 
 //    @Test
 //    void getUserByEmail_shouldReturnUserWhenExists() {
-//        User user = new User("Dean", "Winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
+//        User user = new User("john", "doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
 //        user.setId(1L);
-//        when(userRepository.findByEmail("dean.winchester@example.com")).thenReturn(Optional.of(user));
+//        when(userRepository.findByEmail("john.doe@example.com")).thenReturn(Optional.of(user));
 //
-//        Optional<User> foundUser = userService.getUserByEmail("dean.winchester@example.com");
+//        Optional<User> foundUser = userService.getUserByEmail("john.doe@example.com");
 //
 //        assertTrue(foundUser.isPresent());
-//        assertEquals("dean.winchester@example.com", foundUser.get().getEmail());
+//        assertEquals("john.doe@example.com", foundUser.get().getEmail());
 //    }
 
 //    @Test
 //    void getUserByEmail_shouldReturnEmptyWhenNotExists() {
-//        when(userRepository.findByEmail("dean.winchester@example.com")).thenReturn(Optional.empty());
+//        when(userRepository.findByEmail("john.doe@example.com")).thenReturn(Optional.empty());
 //
-//        Optional<User> foundUser = userService.getUserByEmail("dean.winchester@example.com");
+//        Optional<User> foundUser = userService.getUserByEmail("john.doe@example.com");
 //
 //        assertFalse(foundUser.isPresent());
 //    }
 
     @Test
     void findAllUsers_shouldReturnAllUsers() {
-        User user1 = new User("Dean", "winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
+        User user1 = new User("John", "Doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
         user1.setId(1L);
-        User user2 = new User("Sam", "Winchester", LocalDate.of(1987, 2, 2), "jane.winchester@example.com");
+        User user2 = new User("Jane", "Doe", LocalDate.of(1992, 2, 2), "jane.doe@example.com");
         user2.setId(2L);
         when(userRepository.findAll()).thenReturn(Arrays.asList(user1, user2));
 
@@ -122,9 +120,7 @@ class UserServiceImplTest {
     void deleteUser_shouldThrowExceptionWhenUserHasTrainings() {
         when(trainingRepository.existsByUserId(1L)).thenReturn(true);
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            userService.deleteUser(1L);
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> userService.deleteUser(1L));
 
         String expectedMessage = "User with ID 1 cannot be deleted because they have associated trainings.";
         String actualMessage = exception.getMessage();
@@ -134,22 +130,22 @@ class UserServiceImplTest {
 
     @Test
     void updateUser_shouldUpdateUser() {
-        User existingUser = new User("Dean", "Winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
+        User existingUser = new User("John", "Doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
         existingUser.setId(1L);
-        User updatedUser = new User("Dean", "Winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
+        User updatedUser = new User("John", "Doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
         updatedUser.setId(1L);
         when(userRepository.findById(1L)).thenReturn(Optional.of(existingUser));
         when(userRepository.save(existingUser)).thenReturn(existingUser);
 
         User result = userService.updateUser(1L, updatedUser);
 
-        assertEquals("dean.winchester@example.com", result.getEmail());
+        assertEquals("john.doe@example.com", result.getEmail());
         verify(userRepository, times(1)).save(existingUser);
     }
 
     @Test
     void updateUser_shouldThrowExceptionWhenUserNotFound() {
-        User updatedUser = new User("Dean", "Winchester", LocalDate.of(1985, 1, 1), "dean.winchester@example.com");
+        User updatedUser = new User("John", "Doe", LocalDate.of(1990, 1, 1), "john.doe@example.com");
         when(userRepository.findById(1L)).thenReturn(Optional.empty());
 
         assertThrows(UserNotFoundException.class, () -> userService.updateUser(1L, updatedUser));
