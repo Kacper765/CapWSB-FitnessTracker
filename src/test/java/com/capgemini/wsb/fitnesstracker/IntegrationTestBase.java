@@ -40,7 +40,6 @@ public abstract class IntegrationTestBase {
     }
 
     protected User existingUser(User user) {
-
         return userRepository.save(user);
     }
 
@@ -49,7 +48,6 @@ public abstract class IntegrationTestBase {
     }
 
     protected List<Training> createAllTrainings(List<Training> trainings) {
-
         trainings.forEach(training -> trainingRepository.save(training));
         return trainings;
     }

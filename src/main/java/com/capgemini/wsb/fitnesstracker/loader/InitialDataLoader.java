@@ -48,6 +48,7 @@ class InitialDataLoader {
         List<User> sampleUserList = generateSampleUsers();
         List<Training> sampleTrainingList = generateTrainingData(sampleUserList);
 
+        User testUser = generateUser("Test", "User", 25);
 
         log.info("Finished loading initial data");
     }

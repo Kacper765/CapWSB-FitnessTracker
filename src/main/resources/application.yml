@@ -4,6 +4,20 @@ spring:
     driver-class-name: "org.h2.Driver"
     username: "sa"
     password: "password"
+  jpa:
+    database-platform: "org.hibernate.dialect.H2Dialect"
   h2:
     console:
       enabled: true
+  spring:
+    mail:
+      host: smtp.example.com
+      port: 587
+      username: "username"
+      password: "password"
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true

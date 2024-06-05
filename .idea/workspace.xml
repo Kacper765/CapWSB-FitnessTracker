@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="038a0f62-61da-46b8-98a7-ce09a8d060d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/exception/api/NotFoundExceptionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/livecoding/bean/MyBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/livecoding/bean/MyBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/loader/InitialDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/loader/InitialDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/api/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/api/EmailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/Training.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/Training.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/ActivityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/ActivityType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/capgemini/wsb/fitnesstracker/IntegrationTestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/capgemini/wsb/fitnesstracker/IntegrationTestBase.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Kacper765&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kacper765/CapWSB-FitnessTracker.git&quot;,
+    &quot;accountId&quot;: &quot;fbae599f-dcc1-48b0-a7ab-339e99dfa4f9&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2hKUP9Z9cWvT3rpLblJSHAaV4tK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.FitnessTracker.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.capgemini.wsb.fitnesstracker.exception.api" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.capgemini.wsb.fitnesstracker.exception.api" />
+      <recent name="com.capgemini.wsb.fitnesstracker.mail.internal" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="038a0f62-61da-46b8-98a7-ce09a8d060d2" name="Changes" comment="" />
+      <created>1717342235756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717342235756</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
