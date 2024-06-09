@@ -35,7 +35,12 @@ public class TrainingProviderImpl implements TrainingProvider {
      * @return a list of all trainings
      */
     @Override
-    public List<Training> getTrainings() {
+    public List<Training> getAllTrainings() {
         return trainingRepository.findAll();
+    }
+
+    @Override
+    public List<Training> getTrainingsByMaxDistance(double maxDistance) {
+        return trainingRepository.findTrainingsByMaxDistance(maxDistance);
     }
 }

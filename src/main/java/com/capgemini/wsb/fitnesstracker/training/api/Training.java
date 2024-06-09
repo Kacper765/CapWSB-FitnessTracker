@@ -43,6 +43,9 @@ public class Training {
     @Column(name = "average_speed")
     private double averageSpeed;
 
+    public Training(long l, String sprint, double v) {
+    }
+
     public Long getId() {
         return id;
     }

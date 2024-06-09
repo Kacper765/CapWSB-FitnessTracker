@@ -16,17 +16,7 @@ public class UserProviderImpl implements UserProvider {
     }
 
     @Override
-    public Optional<User> getUserByEmail(String email) {
-        return Optional.empty();
-    }
-
-    @Override
     public List<User> findAllUsers() {
-        return List.of();
-    }
-
-    @Override
-    public List<UserEmailDto> searchUsersByEmailPart(String emailPart) {
         return List.of();
     }
 

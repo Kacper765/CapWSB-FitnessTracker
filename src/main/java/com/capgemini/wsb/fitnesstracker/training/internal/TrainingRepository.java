@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public interface TrainingRepository extends JpaRepository<Training, Long> {
 
@@ -18,4 +19,10 @@ public interface TrainingRepository extends JpaRepository<Training, Long> {
     List<Training> findByEndTimeAfter(Date date);
 
     List<Training> findByActivityType(ActivityType activityType);
+
+    default List<Training> findTrainingsByMaxDistance(double maxDistance) {
+        return findAll().stream()
+                .filter(training -> training.getDistance() <= maxDistance)
+                .collect(Collectors.toList());
+    }
 }

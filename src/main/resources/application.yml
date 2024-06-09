@@ -9,7 +9,8 @@ spring:
   h2:
     console:
       enabled: true
-  spring:
+  jackson:
+    time-zone: Europe/Warsaw
     mail:
       host: smtp.example.com
       port: 587

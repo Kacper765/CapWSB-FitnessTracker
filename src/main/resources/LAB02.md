@@ -22,6 +22,7 @@ Stworzone API powinno pozwalać na:
 - [ ] wyszukiwanie wszystkich treningów dla konkretnej aktywności (np. wszystkie treningi biegowe)
 - [ ] utworzenie nowego treningu
 - [ ] aktualizacja treningu (dowolnie wybrane pole np. dystans)
+- [x] wyszukac konkretny trening, gdzie dystans jest mniejszy od wybranej zdefiniowanej wartosci
 
 ### Wymagania techniczne
 
@@ -53,7 +54,7 @@ Stworzone API powinno pozwalać na:
 - [ ] usunięcie statystyk
 - [ ] wyszukiwanie użytkowników po e-mailu, bez rozróżniania wielkości liter, wyszukujące po fragmencie nazwy (zwracane
   tylko ID oraz e-mail użytkowników)
-- [ ] wyszukiwanie użytkowników po wieku starszym niż zdefiniowany
+- [x] wyszukiwanie użytkowników po wieku starszym niż zdefiniowany
 
 ### Wymagania techniczne
 

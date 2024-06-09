@@ -1,12 +1,11 @@
 package com.capgemini.wsb.fitnesstracker.training.internal;
 
-import com.capgemini.wsb.fitnesstracker.training.api.TrainingDto;
-import com.capgemini.wsb.fitnesstracker.training.api.CreateTrainingDto;
-import com.capgemini.wsb.fitnesstracker.training.api.TrainingService;
-import com.capgemini.wsb.fitnesstracker.training.internal.ActivityType;
+import com.capgemini.wsb.fitnesstracker.training.api.*;
+import com.capgemini.wsb.fitnesstracker.user.internal.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,6 +18,8 @@ import java.util.List;
 public class TrainingController {
 
     private final TrainingService trainingService;
+    private final TrainingMapper trainingMapper;
+    private final UserServiceImpl userServiceImpl;
 
     @GetMapping
     public List<TrainingDto> getAllTrainings() {
@@ -55,4 +56,16 @@ public class TrainingController {
     public TrainingDto updateTraining(@PathVariable Long trainingId, @RequestBody CreateTrainingDto createTrainingDto) {
         return trainingService.updateTraining(trainingId, createTrainingDto);
     }
+
+/**
+ * Endpoint to retrieve training sessions with a maximum distance up to the specified value.
+ *
+ * @param maxDistance the maximum distance of the training sessions to be retrieved.
+ * @return a list of training sessions where the distance is less than or equal to the specified value.
+ */
+@GetMapping("/findTrainingsByMaxDistance/{maxDistance}")
+public List<Training> getTrainingsByMaxDistance(@PathVariable double maxDistance) {
+    // Wywołuje metodę serwisu, aby znaleźć treningi o maksymalnej odległości mniejszej lub równej maxDistance
+    return trainingService.findTrainingsByMaxDistance(maxDistance);
+}
 }

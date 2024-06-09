@@ -8,16 +8,17 @@ import com.capgemini.wsb.fitnesstracker.user.api.UserNotFoundException;
 import com.capgemini.wsb.fitnesstracker.user.api.UserProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
-public class TrainingServiceImpl implements TrainingService {
+@Slf4j
+public class TrainingServiceImpl implements TrainingProvider, TrainingService {
 
     private final TrainingRepository trainingRepository;
     private final TrainingMapper trainingMapper;
@@ -50,9 +51,10 @@ public class TrainingServiceImpl implements TrainingService {
     }
 
     @Override
-    public List<Training> getTrainings() {
+    public List<Training> getAllTrainings() {
         return trainingRepository.findAll();
     }
+
 
     @Override
     public List<TrainingDto> findTrainingsByUserId(final Long userId) {
@@ -106,5 +108,17 @@ public class TrainingServiceImpl implements TrainingService {
                 createTrainingTO.getAverageSpeed()
         );
         return trainingRepository.save(training);
+    }
+
+    @Override
+    public List<Training> getTrainingsByMaxDistance(double maxDistance) {
+        // Wywołuje metodę repozytorium, aby znaleźć treningi o maksymalnej odległości mniejszej lub równej maxDistance
+        return trainingRepository.findTrainingsByMaxDistance(maxDistance);
+    }
+
+    @Override
+    public List<Training> findTrainingsByMaxDistance(double maxDistance) {
+        // Wywołuje metodę repozytorium, aby znaleźć treningi o maksymalnej odległości mniejszej lub równej maxDistance
+        return trainingRepository.findTrainingsByMaxDistance(maxDistance);
     }
 }

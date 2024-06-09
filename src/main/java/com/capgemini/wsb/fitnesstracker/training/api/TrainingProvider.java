@@ -16,6 +16,19 @@ public interface TrainingProvider {
      */
     Optional<User> getTraining(Long trainingId);
 
-    List<Training> getTrainings();
+    /**
+     * Retrieves all training sessions.
+     *
+     * @return a list of all training sessions.
+     */
+    List<Training> getAllTrainings();
+
+    /**
+     * Finds all training sessions with a maximum distance up to the specified value.
+     *
+     * @param maxDistance the maximum distance of the training sessions to be retrieved.
+     * @return a list of training sessions where the distance is less than or equal to the specified value.
+     */
+    List<Training> getTrainingsByMaxDistance(double maxDistance);
 
 }

@@ -4,30 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="038a0f62-61da-46b8-98a7-ce09a8d060d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/exception/api/NotFoundExceptionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/livecoding/bean/MyBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/livecoding/bean/MyBean.java" afterDir="false" />
+    <list default="true" id="038a0f62-61da-46b8-98a7-ce09a8d060d2" name="Changes" comment="Test Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/loader/InitialDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/loader/InitialDataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/api/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/api/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/mail/internal/MailProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/Training.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/Training.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/ActivityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/ActivityType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingProviderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/api/TrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/training/internal/TrainingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/api/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserProviderImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capgemini/wsb/fitnesstracker/user/internal/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LAB02.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LAB02.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/capgemini/wsb/fitnesstracker/IntegrationTestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/capgemini/wsb/fitnesstracker/IntegrationTestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +66,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.FitnessTracker.executor": "Run",
+    "JUnit.TrainingApiIntegrationTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
@@ -80,7 +76,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -104,6 +100,23 @@
       <option name="presentableId" value="Default" />
       <updated>1717342235756</updated>
     </task>
+    <task id="LOCAL-00001" summary="Global Commit">
+      <option name="closed" value="true" />
+      <created>1717601513994</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717601513994</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Test Commit">
+      <option name="closed" value="true" />
+      <created>1717602213479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717602213479</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,5 +129,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix for tests shouldUpdateTraining_whenUpdatingTraining" />
+    <MESSAGE value="Global Commit" />
+    <MESSAGE value="Test Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Commit" />
   </component>
 </project>

@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,7 +57,7 @@ class InitialDataLoader {
     private User generateUser(String name, String lastName, int age) {
         User user = new User(name,
                              lastName,
-                             now().minusYears(age),
+                             LocalDate.now().minusYears(age),
                              "%s.%s@domain.com".formatted(name, lastName));
         return userRepository.save(user);
     }
@@ -64,7 +65,7 @@ class InitialDataLoader {
     private List<User> generateSampleUsers() {
         List<User> users = new ArrayList<>();
 
-        users.add(generateUser("Emma", "Johnson", 28));
+        users.add(generateUser("Emma", "Johnson", 2000-01-01));
         users.add(generateUser("Ethan", "Taylor", 51));
         users.add(generateUser("Olivia", "Davis", 76));
         users.add(generateUser("Daniel", "Thomas", 34));

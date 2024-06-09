@@ -34,12 +34,19 @@ public interface UserService {
     User updateUser(Long userId, User user);
 
     /**
-     * Searches for users by part of their email address.
+     * Retrieves all users.
      *
-     * @param emailPart The part of the email address to search for.
-     * @return A list of UserEmailDto whose emails contain the specified part.
+     * @return A list of all users.
      */
-    List<UserEmailDto> searchUsersByEmailPart(String emailPart);
+    List<User> findAllUsers();
+
+    /**
+     * Retrieves a user based on their ID.
+     *
+     * @param userId the ID of the user to be searched
+     * @return An {@link Optional} containing the located user, or {@link Optional#empty()} if not found
+     */
+    Optional<User> getUser(Long userId);
 
     /**
      * Finds users older than the specified age.
@@ -56,27 +63,4 @@ public interface UserService {
      * @return A list of users older than the specified date (time).
      */
     List<User> getUsersOlderThanDate(LocalDate providedDate);
-
-    /**
-     * Retrieves all users.
-     *
-     * @return A list of all users.
-     */
-    List<User> findAllUsers();
-
-    /**
-     * Retrieves a user based on their ID.
-     *
-     * @param userId the ID of the user to be searched
-     * @return An {@link Optional} containing the located user, or {@link Optional#empty()} if not found
-     */
-    Optional<User> getUser(Long userId);
-
-    /**
-     * Retrieves a user based on their email.
-     *
-     * @param email the email of the user to be searched
-     * @return An {@link Optional} containing the located user, or {@link Optional#empty()} if not found
-     */
-    List<User> getUserByEmail(String email);
 }

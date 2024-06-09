@@ -1,5 +1,6 @@
 package com.capgemini.wsb.fitnesstracker.user.internal;
 
+
 import com.capgemini.wsb.fitnesstracker.user.api.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,7 @@ import static java.time.LocalDate.now;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private final UserRepository userRepository;
@@ -38,24 +39,6 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public List<User> getUserByEmail(final String email) {
-        return userRepository.findByEmail(email);
-    }
-
-    public List<User> getUsersOlderThanProvided(final LocalDate time) {
-        final List<User> olderUsers = new ArrayList<>();
-        final List<User> allUsers = userRepository.findAll();
-        if(!allUsers.isEmpty()) {
-            allUsers.forEach(user -> {
-                if(user.getBirthdate().isBefore(time)) {
-                    olderUsers.add(user);
-                }
-            });
-        }
-        return olderUsers;
-    }
-
-    @Override
     public List<User> findAllUsers() {
         return userRepository.findAll();
     }
@@ -66,23 +49,28 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public List<User> findUsersOlderThan(int age) {
+        LocalDate maxBirthdate = LocalDate.now().minusYears(age);
+        return userRepository.findUsersOlderThan(maxBirthdate);
+    }
+
+    @Override
+    public List<User> getUsersOlderThanDate(final LocalDate time) {
+        // Pobranie wszystkich użytkowników z repozytorium
+        final List<User> allUsers = userRepository.findAll();
+
+        // Filtracja użytkowników na podstawie daty urodzenia
+        List<User> olderUsers = allUsers.stream()
+                .filter(user -> user.getBirthdate().isBefore(time))
+                .toList();
+
+        // Zwrócenie listy starszych użytkowników
+        return olderUsers;
+    }
+
+    @Override
     public User updateUser(Long userId, User user) {
         user.setId(userId);
         return userRepository.save(user);
-    }
-
-    @Override
-    public List<UserEmailDto> searchUsersByEmailPart(String emailPart) {
-        return List.of();
-    }
-
-    @Override
-    public List<User> findUsersOlderThan(int age) {
-        return List.of();
-    }
-
-    @Override
-    public List<User> getUsersOlderThanDate(LocalDate providedDate) {
-        return List.of();
     }
 }
